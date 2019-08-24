@@ -24,10 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cgpivv+0bv&)m)sev__+*22i3umi)mu6ks&+su%b3uo)^z)m6p')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'QnA-env.czgi39hi7r.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['QnA-env.czgi39hi7r.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
