@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>홍익대학교 Q&A</title>
+
+    <!--아래 두 줄은 static 파일의 css를 불러오기 위한 코드-->
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'main/start.css' %}">
+
   </head>
   <body>
 
@@ -17,11 +20,16 @@
         <table style="width: 100%;">
           <tr><td>1학년</td> <td>2학년</td> <td>3학년</td> <td>4학년</td></tr>
         </table>
-        <div class="box2">과목명</div>
+        <div class="box2">
+          <a href="write/">POST 작성</a>
+        </div>
+
+        <!--view의 start에서 넘겨준 posts 에 대해 for 문을 실행-->
         {% for post in posts.all %}
         <div class="box3">{{ post.title }}</div>
         <div class="box4">{{ post.body }}</div>
         {% endfor %}
+
       </div>
     </div>
 

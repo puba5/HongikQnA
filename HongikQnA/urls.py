@@ -18,6 +18,12 @@ from django.urls import path
 import main.views
 
 urlpatterns = [
+    # path 함수 인자 설명
+    # 1번째 인자 의 주소가 들어오면
+    # 2번째 인자의 함수를 실행한다
+    
     path('admin/', admin.site.urls),
     path('', main.views.start, name='start'),
+    path('write/', main.views.write, name='write'),
+    path('write/submit/', main.views.submit, name='submit'),
 ]
