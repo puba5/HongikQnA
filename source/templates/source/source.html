@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- 스태틱 파일을 쓰겠다는 의미 -->
+{% load staticfiles %}
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Image Source</h1>
+                    <p class="lead text-muted">소스를 공유하세요</p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{% static 'Yoshi.png' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text"> 공부 열심히 합시다 </p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+{% endblock %}

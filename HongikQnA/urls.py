@@ -18,6 +18,7 @@ from django.urls import path
 
 # main 어플리케이션의 views파일을 import 해야한다
 import main.views
+import source.views
 
 
 urlpatterns = [
@@ -29,4 +30,6 @@ urlpatterns = [
     path('', main.views.start, name='start'),
     path('write/', main.views.write, name='write'),
     path('write/submit/', main.views.submit, name='submit'),
+
+    path('source/', source.views.source, name='source'),
 ]

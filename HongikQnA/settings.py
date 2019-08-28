@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['QnA-env.czgi39hi7r.us-west-2.elasticbeanstalk.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'source.apps.SourceConfig',
     'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'HongikQnA.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['HongikQnA/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,4 +121,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+# STATIC_ROOT = 'static'
+
+# source 어플리케이션의 static file들을 합치기 위한 코드 
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'source', 'static')
+    ]
+    
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
