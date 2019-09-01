@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['QnA-env.czgi39hi7r.us-west-2.elasticbeanstalk.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'source.apps.SourceConfig',
     'main.apps.MainConfig',
     'django.contrib.admin',
