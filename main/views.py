@@ -6,7 +6,10 @@ from .models import Post
 # view에서 html파일, 그리고 html에서 css파일로 연결이 된다
 
 def start(request):
-    posts = Post.objects
+    # 역순 출력
+    # posts = Post.objects
+    # 역순 출력
+    posts = Post.objects.all().order_by('-id')
     return render(request, 'main/start.html', {'posts':posts})
 
 def write(request):
