@@ -41,7 +41,7 @@
 
   .box3 {
     color: #333;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     padding: 15px;
     margin-top: 30px;
@@ -51,8 +51,8 @@
 
   .box4 {
     color: #000;
-    font-size: 12px;
-    padding: 30px;
+    font-size: 14px;
+    padding: 20px;
     border-left: 1px solid #d1d1d1;
     border-right: 1px solid #d1d1d1;
     border-bottom: 1px solid #d1d1d1;

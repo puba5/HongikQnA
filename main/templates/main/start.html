@@ -14,8 +14,13 @@
 
       <!-- view의 start에서 넘겨준 posts 에 대해 for 문을 실행 -->
       {% for post in posts.all %}
-      <div class="box3">{{ post.title }}</div>
-      <div class="box4">{{ post.body }}</div>
+      <div class="box3"> 
+        <span style="font-size: 18px"> {{ post.title }} </span>
+      </div>
+      <div class="box4" style="font-size: 14px">
+        {{ post.body }}<br>
+        <span style="font-size: 8px; color: #999"> {{ post.pub_date }} </span>
+      </div>
       {% endfor %}
 
     </div>
